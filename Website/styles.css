@@ -1,0 +1,222 @@
+body{
+    background-image: url(images/pexels-8moments-1323550.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 90%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    text-shadow: 3px 3px 5px hsl(40, 100%, 60%),-3px -3px 5px hsla(264, 100%, 60%, 0.617) ;
+}
+h3{
+    text-shadow: -3px -3px 5px hsl(40, 100%, 60%),3px 3px 5px hsla(264, 100%, 60%, 0.617) ;
+}
+p2{
+    border-bottom:5px dotted hsla(264, 100%, 60%, 0.617);
+    border-top: 5px dotted hsla(264, 100%, 60%, 0.617);
+    border-left: 5px dotted hsla(264, 100%, 60%, 0.617);
+    border-right: 5px dotted hsla(264, 100%, 60%, 0.617);
+
+    border-radius: 10px;
+}
+.weatherForm{
+    margin: 20px;
+}
+.cityInput{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid hsla(0, 0%, 20%, 0.3);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+button[type="submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: hsl(125, 40%, 50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover{
+    background-color: hsl(122, 40%, 38%);
+}
+.card{
+    background: linear-gradient(180deg, hsl(200, 100%, 75%), hsl(40, 100%, 75%));
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0.5%);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+.cityDisplay, .tempDisplay{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.75);
+    margin-bottom: 25px;
+}
+.humidityDisplay{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+}
+.errorDisplay{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:hsla(0, 0%, 0%, 0.75);
+}
+  .bn5 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .bn5:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingbn5 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bn5:active {
+    color: #000;
+  }
+  
+  .bn5:active:after {
+    background: transparent;
+  }
+  
+  .bn5:hover:before {
+    opacity: 1;
+  }
+  
+  .bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:hsla(264, 100%, 60%, 0.617);
+    height: 1px;
+  }
+  .pokemon-names-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Ensures 5 items per row */
+    gap: 10px;
+}
+
+.pokemon-names-list li {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold; /* Make names bold */
+    color: white; /* Default text color */
+}
+
+/* Assign specific background colors in a repeating pattern */
+.pokemon-names-list li:nth-child(4n + 1) {
+    background-color: orange; /* Orange for the first item in each set of four */
+}
+
+.pokemon-names-list li:nth-child(4n + 2) {
+    background-color: #D8BFD8; /* Light purple */
+    color: white; /* Keep text white for light purple */
+}
+
+.pokemon-names-list li:nth-child(4n + 3) {
+    background-color: grey; /* Grey for the third item */
+    color: black; /* Change text color to black for grey background */
+}
+
+.pokemon-names-list li:nth-child(4n + 4) {
+    background-color: yellow; /* Yellow for the fourth item */
+    color: black; /* Change text color to black for yellow background */
+}
+
+/* Optional: Add a hover effect */
+.pokemon-names-list li:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+

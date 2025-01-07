@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icons8-favicon-96.png">
+    <title>Pokémon and Weather Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Pokemon name Style */
+
+        .pokemon-names-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Ensures 5 items per row */
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .pokemon-names-list li {
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Before you start doing anything, try To Fetch Some Pokémons!</h2>
+    <input type="text" id="PokemonName" placeholder="Enter Pokemon Name">
+    <br>
+    <a onclick="fetchData()" class="bn5">Fetch Pokémon!</a>
+    <br>
+
+    <img src="" alt="pokemonSprite" id="pokemonSprite" style="display: none">
+
+    <p>
+    <b>Description:</b><br><br>
+    The site fetches and displays images of Pokémons.<br>
+    Simply input the Pokémon name, and you'll instantly<br>
+    see its official artwork.<br>
+    Or you can copy and paste their names from the list<br>
+    below!
+    <br>
+    <br>
+
+    <b>Example Usage:</b><br><br>
+
+    Enter the Pokémon name: "Charizard"<br>
+    View the official Charizard image instantly!
+    </p>
+
+    <br><br><br><br><br><br>
+
+    <!-- Adding the Pokémon Names List Section -->
+
+    <h3>List of 100 Pokémon Names</h3>
+    <ul class="pokemon-names-list">
+        <li>Bulbasaur</li>
+        <li>Ivysaur</li>
+        <li>Venusaur</li>
+        <li>Charmander</li>
+        <li>Charmeleon</li>
+        <li>Charizard</li>
+        <li>Squirtle</li>
+        <li>Wartortle</li>
+        <li>Blastoise</li>
+        <li>Caterpie</li>
+        <li>Metapod</li>
+        <li>Butterfree</li>
+        <li>Weedle</li>
+        <li>Kakuna</li>
+        <li>Beedrill</li>
+        <li>Pidgey</li>
+        <li>Pidgeotto</li>
+        <li>Pidgeot</li>
+        <li>Rattata</li>
+        <li>Raticate</li>
+        <li>Spearow</li>
+        <li>Fearow</li>
+        <li>Ekans</li>
+        <li>Arbok</li>
+        <li>Pikachu</li>
+        <li>Raichu</li>
+        <li>Sandshrew</li>
+        <li>Sandslash</li>
+        <li>Nidoran-f</li>
+        <li>Nidorina</li>
+        <li>Nidoqueen</li>
+        <li>Nidoran-m</li>
+        <li>Nidorino</li>
+        <li>Nidoking</li>
+        <li>Clefairy</li>
+        <li>Clefable</li>
+        <li>Vulpix</li>
+        <li>Ninetales</li>
+        <li>Jigglypuff</li>
+        <li>Wigglytuff</li>
+        <li>Zubat</li>
+        <li>Golbat</li>
+        <li>Oddish</li>
+        <li>Gloom</li>
+        <li>Vileplume</li>
+        <li>Paras</li>
+        <li>Parasect</li>
+        <li>Venonat</li>
+        <li>Venomoth</li>
+        <li>Diglett</li>
+        <li>Dugtrio</li>
+        <li>Meowth</li>
+        <li>Persian</li>
+        <li>Psyduck</li>
+        <li>Golduck</li>
+        <li>Mankey</li>
+        <li>Primeape</li>
+        <li>Growlithe</li>
+        <li>Arcanine</li>
+        <li>Poliwag</li>
+        <li>Poliwhirl</li>
+        <li>Poliwrath</li>
+        <li>Abra</li>
+        <li>Kadabra</li>
+        <li>Alakazam</li>
+        <li>Machop</li>
+        <li>Machoke</li>
+        <li>Machamp</li>
+        <li>Bellsprout</li>
+        <li>Weepinbell</li>
+        <li>Victreebel</li>
+        <li>Tentacool</li>
+        <li>Tentacruel</li>
+        <li>Geodude</li>
+        <li>Graveler</li>
+        <li>Golem</li>
+        <li>Ponyta</li>
+        <li>Rapidash</li>
+        <li>Slowpoke</li>
+        <li>Slowbro</li>
+        <li>Magnemite</li>
+        <li>Magneton</li>
+        <li>Farfetch'd</li>
+        <li>Doduo</li>
+        <li>Dodrio</li>
+        <li>Seel</li>
+        <li>Dewgong</li>
+        <li>Grimer</li>
+        <li>Muk</li>
+        <li>Shellder</li>
+        <li>Cloyster</li>
+        <li>Gastly</li>
+        <li>Haunter</li>
+        <li>Gengar</li>
+        <li>Onix</li>
+        <li>Drowzee</li>
+        <li>Hypno</li>
+        <li>Krabby</li>
+        <li>Kingler</li>
+        <li>Voltorb</li>
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <h3>Going Somewhere? Try to see what`s the weather like!</h3>
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Enter City">
+        <button type="submit">Show Weather</button>
+
+        <div class="card" style="display: none"></div>
+
+    </form>
+    <script src="index.js"></script>
+    
+    <br><br><br><br><br><br><br><br><hr>
+    <footer>
+        <b>Author: Antonios Roussos (100675721)</b><br>
+        <small><a href="mailto:anto.roussos@mc-class.gr">anto.roussos@mc-class.gr</a></small>
+    </footer>
+
+</body>
+</html>

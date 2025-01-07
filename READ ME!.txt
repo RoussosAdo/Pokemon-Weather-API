@@ -1,0 +1,14 @@
+1. Open the Website folder
+2. Open the index file(It may run on any browser that you are using)
+3. When you open it, it will automatically direct you to the website(Pokemon and Weather Exploler)
+4. Now, you can use 2 different ways:
+  
+   
+   4a. The first one is to fetch some pokemons. Your job is to write in the first box the name of the pokemon
+       you would like to see(or simply copy and paste the pokemon name from the list) and then press the black button "Fetch Pokemon!" to see them come to        life as srpites. 
+
+   
+   4b. The second one is a Weather App. Your job is to write the name of the city/country in the "Enter City" box
+       and then press the green button "Show Weather". It will automatically show to you a "Card" that it will display
+       the name of the city/country that you typed, it`s temperature(in celsius),humidity, some info about the weather,
+       and lastly an emoji based on the weather`s temperature.
